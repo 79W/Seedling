@@ -1,0 +1,24 @@
+<!--pages/sort/sort.wxml-->
+<!-- <wxs module="sortfun" src="./sort.wxs"></wxs> -->
+<!-- 分类 -->
+<cu-custom bgColor="bg-white" isBack="{{flast}}">
+<view slot="content">分类</view>
+</cu-custom>
+
+<view class="zhu">
+<view wx:for="{{CategoriesList}}" class="zhubox">
+
+ <navigator url="/pages/sortDetails/sortDetails?title={{item.name}}&id={{item.id}}" class="">
+  <view  class="imgtu">
+    <image src="{{imageslist[index].imgurl}}" mode='aspectFill'></image>
+  </view>
+  <view class="titlitxt">
+    <text>{{item.name}}</text>
+    <!-- <text id="icolike" class=" cuIcon-like"></text> -->
+  </view>
+  </navigator>
+</view>
+
+
+
+</view>

@@ -1,0 +1,106 @@
+<!--顶部标题-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{false}}">
+<!-- <view slot="backText">返回</view> -->
+<view slot="content">乔越博客</view>
+</cu-custom>
+
+<!-- <view wx:for="{{list}}">
+  {{index}}: {{item.date_gmt}}
+</view> -->
+
+ 
+<!-- 轮播图 -->
+<view class="box">
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key>
+  <!-- /pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}} -->
+  <navigator class="dianji" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}"></navigator>
+
+    <image src="{{item.content.img}}" mode="aspectFill" >
+    </image>
+    <video src="{{item.content.img}}" autoplay loop muted show-play-btn="{{true}}" controls="{{true}}" objectFit="cover"></video>
+
+
+
+  </swiper-item>
+</swiper>
+ 
+</view>
+
+
+<!-- 搜索 -->
+<view class="box sousuo">
+  <view  class="cu-bar search">
+    <view class="soukuang search-form  shadow bg-white ">
+      <text class="cuIcon-search"></text>
+      <input value='{{text}}' bindblur='nameblur' type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+      <navigator confirm-type="search" url="/pages/search/search?text={{text}}" class="cu-btn bg-green shadow-blur round ">搜索</navigator>
+    </view>    
+  </view>
+</view>
+
+<!-- 展示三个图 -->
+
+<view  class="padding">
+
+    <view class="grid col-3 grid-square">
+    
+      <view id="sortimg" class="images " wx:for="{{sort}}" wx:key style="background-image:url({{imageslist[index].imgurl}});background-size:100% 100%">
+      <navigator url="/pages/sortDetails/sortDetails?title={{item.name}}&id={{item.id}}" class="">
+           <text>
+           {{item.name}}
+           </text>
+
+            </navigator>
+      </view>
+         
+    </view>
+    
+  </view>
+
+
+<!-- 文章列表 -->
+<view class="zhengwenzishou  text-lg ">
+   <text class="wenzixingshou text-black">Some recent articles</text>
+   <view class="textshouwen text-df">All of me</view>
+</view>
+
+
+<!--  卡片列表  -->
+
+
+<view  wx:for="{{list}}">
+  <!-- <view class="textlist"  > -->
+  <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}" hover-class="none">
+  <view class=" textlist padding-xl radius shadow-blur bg-red margin-top bg-img" style="background-image:url({{item.content.img ? item.content.img : item.content.img}});">
+  <!-- <image src="{{item.content.img}}"></image> -->
+  <view class="cu-tag bg-green">文章</view>
+    <view class="biaoti radius shadow bg-white">
+      <text class="biaotimu">
+        {{item.title.rendered}}
+      </text>
+      
+      <text class="biaoriqi">
+        发布日期：{{item.date}}
+      </text>
+    </view>
+  </view>
+</navigator>
+</view>
+
+<!--  卡片列表  -->
+
+<!-- 提示刷新 -->
+
+<view class="shuaxin">
+
+ <text class='reason_txt'>{{ispotesotext}}</text>
+
+</view>
+
+
+
+
+
+<!--内容结束-->
+ 

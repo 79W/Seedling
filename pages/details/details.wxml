@@ -1,0 +1,116 @@
+
+
+<!--顶部标题-->
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}">
+<view slot="backText">返回</view>
+<view slot="content">{{details_title}}</view>
+</cu-custom>
+
+<!-- 头部 名称等 -->
+<view class="backimg" >
+<view class="mengban" style="background-image:url({{details_img}});background-size:100%"></view>
+  <view class="title">
+    <view class="titletext">
+      <text class=" text-black text-bold" >
+        {{details_title}}
+      </text>
+    </view>
+  </view>
+</view>
+
+<!-- 标签 顶部标签  -->
+<!-- 文章标签以后在写 -->
+<view class='recommend '>
+  <view class="datefa">
+
+  <view class=" cu-capsule round">
+    <view class="cu-tag bg-orange sm">
+      <text class="cuIcon-hotfill"></text>
+    </view>
+    <view class="cu-tag line-orange sm">
+      323
+    </view>
+  </view>
+
+<view class=" cu-capsule round">
+    <view class="cu-tag bg-red sm">
+      <text class="cuIcon-likefill"></text>
+    </view>
+    <view class="cu-tag line-red sm">
+      23
+    </view>
+  </view>
+  
+  <view class=" cu-capsule round">
+    <view class="cu-tag bg-blue sm">
+      发布日期
+    </view>
+    <view class="cu-tag line-blue sm">
+      {{details_date}}
+    </view>
+  </view>
+</view>
+</view>
+
+<!-- 渲染html -->
+<view class="wxmlnews">
+  <htmltowxml text="{{newslist.content.rendered}}" highlightStyle="darcula" bindWxmlTagATap="wxmlTagATap" >
+  </htmltowxml>
+</view>
+<!-- 热门评论 -->
+    <view class="cu-bar">
+    <view class="action">
+      <text class="cuIcon-titles text-green"></text>
+      <text class="text-xl text-bold">热门评论</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">comment</text>
+    </view>
+  </view>
+   <!-- 评论区 内容 -->
+<view >
+ <!-- 少二级评论 以后在写-->
+    <view class=" cu-list menu-avatar comment ">
+
+      <view class="pinglunka cu-item" wx:for="{{newsPostsComment}}">
+
+        <view class="cu-avatar round" style="background-image:url('https://ae01.alicdn.com/kf/U78b8bcb713f34f389bfce350a03c21a2T.jpg');"></view>
+        <view class="content">
+          <view class="text-grey">{{item.author_name}}</view>
+          
+          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+            <view class="flex">
+              <view class="flex-sub">
+              <htmltowxml text="{{item.content.rendered}}" highlightStyle="darcula" bindWxmlTagATap="wxmlTagATap" >
+  </htmltowxml>
+              </view>
+            </view>
+          </view>
+          <view class="margin-top-sm flex justify-between">
+            <view class="text-gray text-df">{{details_date}}</view>
+            <view>
+              <text class="cuIcon-appreciatefill text-red"></text>
+              <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+              
+            </view>
+            
+          </view>
+        </view>
+           <view class="fgxian"></view>
+      </view>
+    
+    </view>
+  
+</view>
+
+<!-- 底部提示 -->
+<view>
+ <text class='reason_txt'>没有了</text>
+</view>
+
+<!-- 底部 空-->
+<view class='bottomdi'></view>
+
+
+<!-- 固定底部 -->
+<view class="copyurl"  bindtap='copyText' data-text="{{newslist.link}}">复制原文地址</view>
+
+

@@ -1,0 +1,52 @@
+<!--  -->
+<cu-custom bgColor="bg-white" isBack="{{true}}">
+<view slot="backText">返回</view>
+<view slot="content">{{sorttitle}}</view>
+</cu-custom>
+
+<view  class="dingimg">
+
+<view id="dingimgtext">{{sorttitle}}</view>
+
+<view id="yiyan">{{yiyan.hitokoto}}</view>
+</view>
+
+
+<!--  -->
+<view wx:for="{{wenlist}}">
+  <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}" hover-class="none">
+    <view class="cartitlepost">
+<view class="bilibuju flex  p-xs margin-bottom-sm mb-sm">
+      <view class="flex-sub padding-sm margin-xs radius">
+      <image src="{{item.content.img}}"></image>
+      </view>
+      <view class="flex-twice padding-sm margin-xs radius">
+       <text>
+               {{item.title.rendered}}
+       </text>
+      <view class="dateitme cu-tag line-blue sm">
+              {{item.date}}
+      </view>
+      </view>
+      
+</view>
+
+
+
+
+    
+        <!-- <view class="timewen">
+        
+         <view class=" cu-capsule round">
+            <view class="cu-tag bg-blue sm">
+              发布日期
+            </view>
+            <view class="cu-tag line-blue sm">
+              {{item.date}}
+            </view>
+          </view>
+        
+        </view> -->
+    </view>
+  </navigator>
+</view>

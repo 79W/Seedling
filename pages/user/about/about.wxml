@@ -1,0 +1,13 @@
+<cu-custom bgColor="bg-gradual-green" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">关于</view></cu-custom>
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于ColorUI组件库</view>
+  <view class='text-content'>
+    <view>Hi！创作家~欢迎使用YsdV博客小程序！</view>
+    <view class='margin-top-sm'>该项目是我个人开发的一款基于WordPress博客的小程序。这个项目的基础元素参考了各类ui，还有拓展的地步。这也是初代也算自己的一个处女作品虽然没有什么难度，本项目完全开源如果你有一些好的想法可以在GitHub里提交给我，我会加入到项目里。</view>
+    <view class='margin-top-sm'>项目是开源的，不收取任何费用，如果这个项目有帮到你，或者你觉得很赞，可以在GitHub里扫描赞赏码支持一下！</view>
+    <view class='margin-top-sm'>项目的ui是我这个直男一点点的凑出来，看不顺眼可以跟我提出来我会尽可能的去修改 ，项目写的也比较烂希望谅解！！！</view>
+    <view class='margin-top-sm'>该项目你可以用到基于WordPress的博客。作者我也是花了时间和精力的，我不希望你拷贝一份，做一些修改发布就变成了一个独立的项目，希望能注明一下我这个原作者٩(๑❛ᴗ❛๑)۶ 就算有很多是参考的吧！！</view>
+    <view class='margin-top-sm'>特别感谢ColorUI组件库,本项目大部分基于这个组件库！</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

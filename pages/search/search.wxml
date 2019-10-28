@@ -1,0 +1,64 @@
+<!-- 搜索页 -->
+
+
+<!--顶部标题-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+<view slot="backText">返回</view>
+<view slot="content">{{search_text}}</view>
+</cu-custom>
+
+
+<!-- 顶部图 -->
+<view class="toptitle" style="background-image:url('https://ae01.alicdn.com/kf/U5571ae780b7b45dcab11899287e32dafy.png');background-size:100%" >
+
+<view class="box sousuo">
+  <view  class="cu-bar search">
+    <view class="soukuang search-form shadow bg-white ">
+      <text class="cuIcon-search"></text>
+      <input value='{{search_text}}' bindblur='nameblur' type="text" placeholder="搜索图片、文章、视频" confirm-type="search" bindconfirm="sousuoan"></input>
+      <button confirm-type="search" bindtap="sousuoan"  class="cu-btn bg-blue shadow-blur round ">搜索</button>
+    </view>    
+  </view>
+</view>
+</view>
+
+      <!--  卡片列表  -->
+
+
+      <view  wx:for="{{search_posts}}">
+        <!-- <view class="textlist"  > -->
+        <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}" hover-class="none">
+
+        <view class="carelist  ">
+        <view class="title">
+        <!-- 标题 -->
+        <text>
+        {{item.title.rendered}}
+        </text>
+      </view>
+
+        <view class="datari">
+        
+          <view class="tiaodata cu-capsule radius">
+          <view class="cu-tag bg-blue sm">
+            <text class="cuIcon-remind"></text>
+          </view>
+          <!-- 日期 -->
+          <!-- 却个文章标签以后写 -->
+          <view class="cu-tag line-blue sm">
+            {{item.date}}
+          </view>
+        </view>
+
+        </view>
+        <image class="imagetu" src="{{item.content.img}}"></image>
+        </view>
+      </navigator>
+  </view>
+
+
+<view class="dibub">
+
+ <text class='reason_txt'>没有了</text>
+
+</view>
