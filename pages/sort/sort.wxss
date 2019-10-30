@@ -9,7 +9,7 @@
 .zhubox{
   width: 43%;
   height: 175px;
-  background: red;
+  /* background: red; */
   /* float:left; */
   margin: 10px;
   margin-left: 4%;

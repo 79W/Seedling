@@ -8,7 +8,7 @@
 <view class="zhu">
 <view wx:for="{{CategoriesList}}" class="zhubox">
 
- <navigator url="/pages/sortDetails/sortDetails?title={{item.name}}&id={{item.id}}" class="">
+ <navigator url="/pages/sortDetails/sortDetails?title={{item.name}}&id={{item.id}}&imgurl={{imageslist[index].imgurl}}" class="">
   <view  class="imgtu">
     <image src="{{imageslist[index].imgurl}}" mode='aspectFill'></image>
   </view>

@@ -28,6 +28,8 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({  //this.setData的方法用于把传递过来的id转化成小程序模板语言
+      imgurl: options.imgurl,
+      getimg: defaultimg,
       sorttitle : options.title
     })
     var yiyan = wxRequest.getRequest('https://v1.hitokoto.cn/');

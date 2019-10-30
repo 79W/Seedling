@@ -63,7 +63,12 @@ Page({
     var getPostsRequest = wxRequest.getRequest(Api.getPostsComment(options.id));
     getPostsRequest.then(res => {
       // console.log(res.data)
-      res.data[0].content.rendered = res.data[0].content.rendered.substring(3);
+      try{
+        res.data[0].content.rendered = res.data[0].content.rendered.substring(3);
+      } catch (e) {
+        console.log('评论区有异常：'+e+'')
+      }
+      
       
       this.setData({
         newsPostsComment: res.data,

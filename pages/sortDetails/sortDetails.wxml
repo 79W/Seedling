@@ -4,13 +4,12 @@
 <view slot="content">{{sorttitle}}</view>
 </cu-custom>
 
-<view  class="dingimg">
+<view  class="dingimg" style="background-image:url({{getimg}});background-size: 100% 100%;">
 
 <view id="dingimgtext">{{sorttitle}}</view>
 
 <view id="yiyan">{{yiyan.hitokoto}}</view>
 </view>
-
 
 <!--  -->
 <view wx:for="{{wenlist}}">

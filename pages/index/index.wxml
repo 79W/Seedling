@@ -72,14 +72,13 @@
 <view  wx:for="{{list}}">
   <!-- <view class="textlist"  > -->
   <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}" hover-class="none">
-  <view class=" textlist padding-xl radius shadow-blur bg-red margin-top bg-img" style="background-image:url({{item.content.img ? item.content.img : item.content.img}});">
+  <view class=" textlist padding-xl radius shadow-blur bg-white margin-top bg-img" style="background-image:url('{{item.content.img}}');">
   <!-- <image src="{{item.content.img}}"></image> -->
   <view class="cu-tag bg-green">文章</view>
     <view class="biaoti radius shadow bg-white">
       <text class="biaotimu">
         {{item.title.rendered}}
       </text>
-      
       <text class="biaoriqi">
         发布日期：{{item.date}}
       </text>
