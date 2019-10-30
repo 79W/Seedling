@@ -1,8 +1,9 @@
 /*
  * WordPres版微信小程序
  * author: qiaoyue
+ * name:幼苗小程序
  * organization: 乔越博客 www.79bk.cn
- * github: https://github.com/79zhanghao/YSDV
+ * github: https://github.com/79zhanghao/Seedling
  * 开源协议：MIT
  * Copyright (c) 2019 https://www.79bk.cn All rights reserved.
  */
@@ -22,7 +23,6 @@ export default {
   getImgJson: APIIMGJSON,
   getSortList: SORTLIST,
 }
-
 
 // https://www.79bk.cn/wp-content/uploads/2019/10/QQ20191028-142200@2x.png
 // https://www.79bk.cn/wp-content/uploads/2019/10/QQ20191028-141912@2x.png

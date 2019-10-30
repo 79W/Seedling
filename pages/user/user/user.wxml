@@ -1,8 +1,8 @@
 <scroll-view scroll-y class="scrollPage">
   <view class="UCenter-bg">
     <image src="https://ae01.alicdn.com/kf/Uac101ff2e57a4780a3b6c8d11b006f20Q.png" class="png" mode="widthFix"></image>
-    <view class="text-xl">YsdV小程序
-      <text class="text-df">v1.0</text>
+    <view class="text-xl">幼苗
+      <text class="text-df">v1.0.1</text>
     </view>
     <view class="margin-top-sm">
       <text>By:乔越博客</text>
@@ -28,7 +28,7 @@
   </view>
   <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
     <view class="cu-item arrow">
-      <view class="content" bindtap="CopyLink" data-link="https://github.com/79zhanghao/ysdv">
+      <view class="content" bindtap="CopyLink" data-link="https://github.com/79zhanghao/Seedling">
         <text class="cuIcon-github text-grey"></text>
         <text class="text-grey">GitHub</text>
       </view>
@@ -36,7 +36,7 @@
     <view class="cu-item arrow">
       <navigator class="content" url="../../../pages/user/about/about" hover-class="none">
         <text class="cuIcon-commentfill text-green"></text>
-        <text class="text-grey">关于YsdV博客小程序</text>
+        <text class="text-grey">关于幼苗博客小程序</text>
       </navigator>
     </view>
     <view class="cu-item arrow">
