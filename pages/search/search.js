@@ -33,7 +33,7 @@ Page({
 
   sousuoan:function(){
     wx.showLoading({
-      title: '正在加载',
+      title: '正在搜索',
       mask: true,
       duration: 1500,
     }); 
@@ -41,6 +41,21 @@ Page({
     //获取搜索的文章内容
     var getPostsRequest = wxRequest.getRequest(Api.getPostsSearch(that.data.search_text));
     getPostsRequest.then(res => {
+
+      if (res.data.length <= 0){
+        wx.showToast({
+          title: '没有搜到',
+          mask: true,
+          duration: 1000
+        });
+      }else{
+        wx.showToast({
+          title: '加载成功',
+          mask: true,
+          duration: 1000
+        });
+      }
+
       // console.log(res.data)
       var getDateLength = res.data.length;
       for (var i = 0; i < getDateLength; i++) {
@@ -72,9 +87,30 @@ Page({
     search_text: options.text,
     })
 
+    wx.showLoading({
+      title: '正在搜索',
+      mask: true,
+      duration: 1500,
+    }); 
     //获取搜索的文章内容
     var getPostsRequest = wxRequest.getRequest(Api.getPostsSearch(that.data.search_text));
     getPostsRequest.then(res => {
+
+      if (res.data.length <= 0) {
+        wx.showToast({
+          title: '没有搜到',
+          mask: true,
+          duration: 1000
+        });
+      } else {
+        wx.showToast({
+          title: '加载成功',
+          mask: true,
+          duration: 1000
+        });
+      }
+
+
       // console.log(res.data)
       var getDateLength = res.data.length;
       for (var i = 0; i < getDateLength; i++) {

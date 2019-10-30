@@ -2,7 +2,7 @@
   <view class="UCenter-bg">
     <image src="https://ae01.alicdn.com/kf/Uac101ff2e57a4780a3b6c8d11b006f20Q.png" class="png" mode="widthFix"></image>
     <view class="text-xl">幼苗
-      <text class="text-df">v1.0.1</text>
+      <text class="text-df">v1.1.0</text>
     </view>
     <view class="margin-top-sm">
       <text>By:乔越博客</text>

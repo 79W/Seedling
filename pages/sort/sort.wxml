@@ -4,21 +4,37 @@
 <cu-custom bgColor="bg-white" isBack="{{flast}}">
 <view slot="content">分类</view>
 </cu-custom>
-
+<view class="container">
 <view class="zhu">
-<view wx:for="{{CategoriesList}}" class="zhubox">
 
- <navigator url="/pages/sortDetails/sortDetails?title={{item.name}}&id={{item.id}}&imgurl={{imageslist[index].imgurl}}" class="">
+<view class="sorttop1">
+ <navigator url="/pages/sortDetails/sortDetails?title={{CategoriesList[0].name}}&id={{CategoriesList[0].id}}&imgurl={{imageslist[33].imgurl}}" class="">
+<view class="sortimgtop">
+<image src="{{imageslist[33].imgurl}}" mode='aspectFill'></image>
+</view>
+
+<view class="sort0text">{{CategoriesList[0].name}}</view>
+<view class="biaoqiansort cu-tag bg-blue light">未订阅</view>
+</navigator>
+</view>
+
+<view wx:for="{{CategoriesList.length - 1}}" class="zhubox" >
+ <navigator url="/pages/sortDetails/sortDetails?title={{CategoriesList[index+1].name}}&id={{CategoriesList[index+1].id}}&imgurl={{imageslist[index].imgurl}}" class="">
   <view  class="imgtu">
     <image src="{{imageslist[index].imgurl}}" mode='aspectFill'></image>
   </view>
   <view class="titlitxt">
-    <text>{{item.name}}</text>
+    <text>{{CategoriesList[index+1].name}}</text>
+    <view class="biaoqiansort2 cu-tag bg-blue light sm">未订阅</view>
     <!-- <text id="icolike" class=" cuIcon-like"></text> -->
   </view>
   </navigator>
 </view>
 
+</view>
+
+<view class='placeholder-view'></view>
 
 
 </view>
+

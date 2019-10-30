@@ -9,13 +9,44 @@
       </view>
       <view class="margin-top-sm text-content">
         <view>1.项目完工</view>
-        <view>2.历时3个礼拜</view>
-        <view>3.这是一个好的开始</view>
+        <view>2.项目正式上线</view>
+        <view>3.基础壳子以完成 后期会慢慢更新</view>
         <view>4.加油</view>
+        <view>5.By：乔越博客</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.0.1</view>
+        <view class="cu-tag line-white">2019/10/29</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.修复项目图片加载</view>
+        <view>2.修复首页显示色调</view>
+        <view>3.修复api接口</view>
+        <view>4.更改名称为：幼苗Seedling</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.1.0</view>
+        <view class="cu-tag line-white">2019/10/30</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.修改搜索页的搜索反馈</view>
+        <view>2.修改首页加载反馈</view>
+        <view>3.修改分页排版</view>
+        <view>4.修改文章阅读页排版</view>
+        <view>5.修复文章阅读页以知Bug</view>
       </view>
     </view>
   </view>
 
   
- 
 </view>

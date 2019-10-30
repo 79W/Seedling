@@ -7,22 +7,19 @@
 </cu-custom>
 
 <!-- 头部 名称等 -->
-<view class="backimg" >
-<view class="mengban" style="background-image:url({{details_img}});background-size:100%"></view>
+<view class="backimg" style="background-image:url({{details_img}});background-size:100%" >
+<!-- <view class="mengban" ></view> -->
   <view class="title">
     <view class="titletext">
       <text class=" text-black text-bold" >
         {{details_title}}
       </text>
     </view>
-  </view>
-</view>
 
 <!-- 标签 顶部标签  -->
 <!-- 文章标签以后在写 -->
 <view class='recommend '>
   <view class="datefa">
-
   <view class=" cu-capsule round">
     <view class="cu-tag bg-orange sm">
       <text class="cuIcon-hotfill"></text>
@@ -51,6 +48,9 @@
   </view>
 </view>
 </view>
+  </view>
+</view>
+
 
 <!-- 渲染html -->
 <view class="wxmlnews">

@@ -151,12 +151,11 @@ Page({
     
     if (that.data.isLastPage){
 
-
-
-    
-
     //上啦刷新加载多点文章
     if (this.data.state == 1) {
+      wx.showLoading({
+        title: '加载中',
+      })
       this.data.pageid = this.data.pageid + 1;
       // console.log(this.data.pageid)
     //调用文章列表

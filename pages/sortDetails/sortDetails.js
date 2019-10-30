@@ -39,9 +39,28 @@ Page({
         yiyan: res.data,
       })
     })
-
+    wx.showLoading({
+      title: '加载中...',
+    })
     var fenwenzhang = wxRequest.getRequest(Api.getCategoriesPosts(options.id));
     fenwenzhang.then(res => {
+
+      if(res.data.length <= 0){
+            wx.showToast({
+              title: '没有内容！',
+              mask: true,
+              duration: 1000
+            });
+
+      }else{
+          wx.showToast({
+            title: '加载成功',
+            mask: true,
+            duration: 1000
+          });
+      }
+
+
       // console.log(res.data)
 
       var getDateLength = res.data.length;
