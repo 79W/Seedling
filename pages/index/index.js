@@ -53,8 +53,10 @@ Page({
 
 
   onLoad: function () {
+    wx.showLoading({
+      title: '正在加载数据...',
+    })
     var that = this;
-    
     //调用文章列表 第一次
     var getPostsRequest = wxRequest.getRequest(Api.getPosts(1));
     getPostsRequest.then(res => {
@@ -86,7 +88,13 @@ Page({
       //     listcategories: res2.data
       //   })
       // })
-
+      if (getDateLength > 0){
+        wx.showToast({
+          title: '加载成功',
+          mask: true,
+          duration: 1000
+        });
+      }
       that.setData({
         list2:res.data,
         list: res.data,
