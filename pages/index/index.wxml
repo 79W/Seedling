@@ -14,7 +14,7 @@
 <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
   <swiper-item wx:for="{{swiperList}}" wx:key>
   <!-- /pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}} -->
-  <navigator class="dianji" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}"></navigator>
+  <navigator class="dianji" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&tagslist={{item.tags}}"></navigator>
 
     <image src="{{item.content.img}}" mode="aspectFill" >
     </image>
