@@ -2,6 +2,8 @@
 
 var Api = require('../../utils/api.js');
 var wxRequest = require('../../utils/wxRequest.js')
+import config from '../../utils/config.js'
+var defaultimg = config.getDefaultImg;
 
 
 Page({
@@ -14,6 +16,7 @@ Page({
     newsPostsComment:[],
     tags:[],
     tags2:[],
+    likelist:[],
   },
   //复制原文地址
   copyText: function (e) {
@@ -42,20 +45,21 @@ Page({
   onLoad: function (options) {       //options用于接收上个页面传递过来的参数
     var that = this;
     that.setData({  //this.setData的方法用于把传递过来的id转化成小程序模板语言
-      // details_id: options.id,  
+      details_id: options.id,  
          //id是a页面传递过来的名称，a_id是保存在本页面的全局变量   {{b_id}}方法使用
       details_title: options.title,
       details_img: options.img,
       details_date: options.date,
+      datails_tagslist: options.tagslist
       // list: options.list,
       // title: options.title
       
     })
-  
+      
     // 请求接口 获取文章详情渲染
     var getPostsRequest = wxRequest.getRequest(Api.getPostsId(options.id));
     getPostsRequest.then(res => {
-        this.setData({
+      that.setData({
           newslist: res.data,
         })
       })
@@ -70,10 +74,49 @@ Page({
       }
       
       
-      this.setData({
+      that.setData({
         newsPostsComment: res.data,
       })
     })
+
+
+
+
+
+      //获取相关文章
+      // getPostsByTags
+      // details_id
+    // var words = options.tagslist.split(","); 
+    var getPostsByTagsRequest = wxRequest.getRequest(Api.getPostsByTags(options.id, options.tagslist));
+    getPostsByTagsRequest.then(res => {
+
+      var getDateLength = res.data.length;
+      for (var i = 0; i < getDateLength; i++) {
+        //处理时间
+        if (res.data[i].date.length < 20) {
+          res.data[i].date = res.data[i].date.substring(0, 10);
+        }
+        // 获取文章的第一个图片地址,如果没有给出默认图片
+        var regex = /<img.*?src=[\'"](.*?)[\'"].*?>/g;
+        var arrReg = regex.exec(res.data[i].content.rendered);
+        var src = defaultimg;
+        if (!arrReg) {
+          res.data[i].content.img = src
+        } else {
+          res.data[i].content.img = arrReg[1];
+        }
+      }
+
+      console.log(res.data)
+      // console.log()
+      that.setData({
+        likelist: res.data,
+      })
+    })
+
+
+
+
 
 
   },

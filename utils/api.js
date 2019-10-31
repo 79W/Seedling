@@ -34,11 +34,16 @@ module.exports = {
   //获取全部分类
   getCategories: function () {
     return HOST_URI + 'categories?per_page=100&orderby=count&order=desc';
-    // https://www.79bk.cn//wp-json/wp/v2/categories?per_page=100&orderby=count&order=desc
+
   },
   //获取分类文章
   getCategoriesPosts: function (id) {
     return HOST_URI + 'posts?per_page=99&orderby=date&order=desc&page=1&categories='+id;
+  },
+  //获取文章分类
+  getlistCategories: function (id) {
+
+    return HOST_URI + 'categories?include='+id+'&orderby=count&order=desc';
   },
 
 //搜索文章
@@ -54,16 +59,19 @@ module.exports = {
 
     return Math.floor(Math.random() * 666)
   },
+  // 获取tag相关的文章列表
+  getPostsByTags: function (id, tags) {
+    var url = HOST_URI + 'posts?per_page=4&&page=1&exclude=' + id + "&tags=" + tags;
+    return url;
+  },
 
-
-
+  //默认图片
   getimgjson:function(){
 
     return IMGJSON
   },
-
+  //首页三个分类
   getsortzhiding:function(){
-    // https://www.79bk.cn//wp-json/wp/v2/categories?include=1&orderby=count&order=desc
     var url = HOST_URI + 'categories?include=' + SORTLIST +'&orderby=count&order=desc';
     return url
   }

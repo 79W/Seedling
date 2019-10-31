@@ -111,3 +111,47 @@ border-radius: 10px; */
   background: linear-gradient(#D8D8D8, #D8D8D8) repeat-x center;
   background-size: 0.06rem 0.06rem;
 }
+
+/* 猜你喜欢 */
+
+.likepost{
+  width: 100%;
+
+}
+.listpost{
+  width: 92%;
+  height: 80px;
+  /* background: red; */
+  margin: 10px auto;
+  /* margin: 10px; */
+  /* margin-top:10px;  */
+  /* line-height: 80px; */
+}
+
+.texttitle{
+  /* position: relative; */
+  /* display: inline-block; */
+  width: 70%;
+  height: 80px;
+  float: left;
+  font-size: 16px;
+  color: rgb(95, 93, 93);
+  /* position: relative;
+  top: -50px;
+  left: 17px; */
+  /* margin-top: 5px; */
+
+}
+.texttitle text{
+  /* margin: 10px; */
+  position: relative;
+  top: 10px;
+  left: 0px;
+  margin: 5px;
+}
+
+.likepost image{
+  width: 30%;
+  height: 70px;
+  margin-top:6px; 
+}

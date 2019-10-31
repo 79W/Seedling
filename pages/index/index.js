@@ -40,6 +40,8 @@ Page({
     //fenlei
     sort1:[],
     sort:[],
+    listcategories:[],
+    listcategories2:[]
   },
   //获取搜索输入的内容
   nameblur: function (e) {
@@ -59,10 +61,11 @@ Page({
       // console.log(res.data)
       var getDateLength = res.data.length;
       for (var i = 0; i < getDateLength; i++) {
+        //处理时间
         if (res.data[i].date.length < 20) {
           res.data[i].date = res.data[i].date.substring(0, 10);
         }
-        //获取文章的第一个图片地址,如果没有给出默认图片
+        // 获取文章的第一个图片地址,如果没有给出默认图片
         var regex = /<img.*?src=[\'"](.*?)[\'"].*?>/g;
         var arrReg = regex.exec(res.data[i].content.rendered);
         var src = defaultimg;
@@ -71,8 +74,19 @@ Page({
         } else {
           res.data[i].content.img = arrReg[1];
         }
-
       }
+      //文章分类名 显示右上角 没写
+      // console.log(that.data.listcategories2)
+      // //请求分类名第o个
+      // var getPostssort = wxRequest.getRequest(Api.getlistCategories(that.data.listcategories2));
+      // getPostssort.then(res2 => {
+      //   console.log(res2.data)
+      
+      //   that.setData({
+      //     listcategories: res2.data
+      //   })
+      // })
+
       that.setData({
         list2:res.data,
         list: res.data,

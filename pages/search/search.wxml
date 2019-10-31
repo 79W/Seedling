@@ -27,7 +27,7 @@
 
       <view  wx:for="{{search_posts}}">
         <!-- <view class="textlist"  > -->
-        <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}" hover-class="none">
+        <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&tagslist={{item.tags}}" hover-class="none">
 
         <view class="carelist  ">
         <view class="title">

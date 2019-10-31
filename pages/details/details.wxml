@@ -57,6 +57,40 @@
   <htmltowxml text="{{newslist.content.rendered}}" highlightStyle="darcula" bindWxmlTagATap="wxmlTagATap" >
   </htmltowxml>
 </view>
+
+<!-- 猜你喜欢 -->
+
+
+<!-- 热门评论 -->
+    <view class="cu-bar">
+    <view class="action">
+      <text class="cuIcon-titles text-green"></text>
+      <text class="text-xl text-bold">猜你喜欢</text>
+      <text class="text-Abc text-gray self-end margin-left-sm">Articles</text>
+    </view>
+  </view>
+
+<!-- 喜欢文章 -->
+<view class="likepost" wx:for="{{likelist}}">
+
+
+<navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&tagslist={{item.tags}}" hover-class="none">
+<view class="listpost">
+
+<view class="texttitle"> <text>{{item.title.rendered}}</text> </view>
+
+<image src="{{item.content.img}}"></image>
+
+</view>
+</navigator>
+
+
+
+
+</view>
+
+
+
 <!-- 热门评论 -->
     <view class="cu-bar">
     <view class="action">
@@ -65,6 +99,10 @@
       <text class="text-Abc text-gray self-end margin-left-sm">comment</text>
     </view>
   </view>
+
+
+
+
    <!-- 评论区 内容 -->
 <view >
  <!-- 少二级评论 以后在写-->
@@ -76,13 +114,12 @@
         <view class="content">
           <view class="text-grey">{{item.author_name}}</view>
           
-          <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
-            <view class="flex">
-              <view class="flex-sub">
+          <view class="bg-white pbiangkuang padding-sm radius margin-top-sm  text-sm">
+            
+             
               <htmltowxml text="{{item.content.rendered}}" highlightStyle="darcula" bindWxmlTagATap="wxmlTagATap" >
   </htmltowxml>
-              </view>
-            </view>
+            
           </view>
           <view class="margin-top-sm flex justify-between">
             <view class="text-gray text-df">{{details_date}}</view>

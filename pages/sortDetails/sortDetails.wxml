@@ -13,7 +13,7 @@
 
 <!--  -->
 <view wx:for="{{wenlist}}">
-  <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&list={{item.tags}}" hover-class="none">
+  <navigator class="content" url="/pages/details/details?id={{item.id}}&img={{item.content.img}}&date={{item.date}}&title={{item.title.rendered}}&tagslist={{item.tags}}" hover-class="none">
     <view class="cartitlepost">
 <view class="bilibuju flex  p-xs margin-bottom-sm mb-sm">
       <view class="flex-sub padding-sm margin-xs radius">

@@ -109,10 +109,13 @@ border-radius:10px;
 }
 .cu-tag{
   position: absolute;
+  /* left: 75%; */
   left: 83%;
-  top: 10px;
+  top: 15px;
   border-radius:50px;
   z-index: 100;
+  /* margin: 0 auto; */
+  /* margin-right:10px;  */
 }
 
 .dianji{

@@ -48,5 +48,20 @@
     </view>
   </view>
 
+  <view class="cu-item text-green">
+    <view class="bg-green content shadow">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-white text-green">v1.1.1</view>
+        <view class="cu-tag line-white">2019/10/31</view>
+      </view>
+      <view class="margin-top-sm text-content">
+        <view>1.新增文章推荐</view>
+        <view>2.修改评论排版</view>
+        <view>3.修复已知Bug</view>
+        <view>4.修复部分ui问题</view>
+      </view>
+    </view>
+  </view>
+
   
 </view>
