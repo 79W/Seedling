@@ -59,7 +59,12 @@
 
 
 ## 演示
+###小程序搜索：乔越博客 即可
 
+或者扫码：可能加载不出来 去我博客 也可看到：
+
+
+![小程序二维码，加载不出来请到我博客来看](https://ae01.alicdn.com/kf/U852f5c4a855d45b0b55f3bf3cc03773d9.jpg)
 
 
 ![img](https://www.79bk.cn/wp-content/uploads/2019/10/1.png)
