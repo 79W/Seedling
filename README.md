@@ -20,9 +20,9 @@
 
 ​		在浏览器访问你的博客
 
-​		如博客地址是：https://www.79bk.cn/
+​		如博客地址是：https://www.xxx.cn/
 
-​		则需要访问：https://www.79bk.cn/wp-json/wp/v2/posts
+​		则需要访问：https://www.xxx.cn/wp-json/wp/v2/posts
 
 ​		如果你的访问不是404则可以使用
 
@@ -48,9 +48,7 @@
 
 ## 交流
 
-  qq交流群：群号:741152251 （志同道合的朋友来吧）
-
-​		代码bug 或者你看着不顺眼等问题可以来我博客进行交流！[乔越博客](https://www.79bk.cn/)
+​		代码bug 或者你看着不顺眼等问题可以来我博客进行交流！[博客](https://www.xxx.cn/)
 
 ## 感谢
 
@@ -61,7 +59,7 @@
 
 
 ## 演示
-###小程序搜索：乔越博客 即可
+###小程序搜索：博客 即可
 
 或者扫码：可能加载不出来 去我博客 也可看到：
 
@@ -69,22 +67,5 @@
 ![小程序二维码，加载不出来请到我博客来看](https://ae01.alicdn.com/kf/U852f5c4a855d45b0b55f3bf3cc03773d9.jpg)
 
 
-![img](https://www.79bk.cn/wp-content/uploads/2019/10/1.png)
-
-
-
-![img](https://www.79bk.cn/wp-content/uploads/2019/10/2.png)
-
-
-
-![img](https://www.79bk.cn/wp-content/uploads/2019/10/56.png)
-
-
-
-![img](https://www.79bk.cn/wp-content/uploads/2019/10/4.png)
-
-
-
-![img](https://www.79bk.cn/wp-content/uploads/2019/10/3.png)
 
 
